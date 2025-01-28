@@ -42,6 +42,20 @@ public class Usuario {
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "usuario", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("usuario")
 	private List<Postagem> postagem;
+	
+	//Métodos Construtores
+	
+	public Usuario(Long id, String nome, String usuario, String senha, String foto) {
+		this.id = id;
+		this.nome = nome;
+		this.usuario = usuario;
+		this.senha = senha;
+		this.foto = foto;
+	}
+	
+	public Usuario() {	}
+	
+	//Métodos Getters and Setters
 
 	public Long getId() {
 		return id;
@@ -50,6 +64,7 @@ public class Usuario {
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 
 	public String getNome() {
 		return nome;
