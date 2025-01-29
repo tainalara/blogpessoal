@@ -1,6 +1,5 @@
-/*package com.generation.blogpessoal.configuration;
+package com.generation.blogpessoal.configuration;
 
-import javax.sound.midi.MidiDevice.Info;
 
 import org.springdoc.core.customizers.OpenApiCustomizer;
 import org.springframework.context.annotation.Bean;
@@ -9,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import io.swagger.v3.oas.models.ExternalDocumentation;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
+import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
 import io.swagger.v3.oas.models.responses.ApiResponse;
 import io.swagger.v3.oas.models.responses.ApiResponses;
@@ -28,11 +28,11 @@ public class SwaggerConfig {
                     .url("https://brazil.generation.org/"))
                 .contact(new Contact()
                     .name("Tainá Lara")
-                    .url("https://github.com/tainalara")
+                    .url("https://github.com/tainalara/blogpessoal")
                     .email("tainalara.dev@gmail.com")))
             .externalDocs(new ExternalDocumentation()
                 .description("Github")
-                .url("https://github.com/tainalara/blogpessoal"));
+                .url("https://github.com/tainalara/blogpessoal/"));
     }
 
 
@@ -62,4 +62,4 @@ public class SwaggerConfig {
 		return new ApiResponse().description(message);
 
 	}
-}*/
+}
